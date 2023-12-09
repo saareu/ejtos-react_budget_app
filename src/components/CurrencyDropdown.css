@@ -1,0 +1,10 @@
+.currency-dropdown {
+    background-color: green;
+    color: white;
+    padding: 5px;
+}
+
+.currency-dropdown option:hover {
+    background-color: white;
+    color: black;
+}
