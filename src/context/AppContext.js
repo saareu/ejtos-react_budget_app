@@ -105,6 +105,13 @@ export const AppProvider = (props) => {
         }, 0);
         remaining = state.budget - totalExpenses;
     }
+     // New function to dispatch action to update budget
+     const updateBudget = (newBudget) => {
+        dispatch({
+            type: 'SET_BUDGET',
+            payload: newBudget,
+        });
+    };   
 
     return (
         <AppContext.Provider
@@ -113,7 +120,8 @@ export const AppProvider = (props) => {
                 budget: state.budget,
                 remaining: remaining,
                 dispatch,
-                currency: state.currency
+                currency: state.currency,
+                updateBudget
             }}
         >
             {props.children}
